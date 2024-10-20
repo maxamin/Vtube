@@ -1,0 +1,748 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>14d5ec27-b0de-4c52-864f-191071b07120</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>gui_main_live.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DeepFaceLab</Name>
+    <RootNamespace>DeepFaceLab</RootNamespace>
+    <TestFramework>unittest</TestFramework>
+    <InterpreterId>Global|VisualStudio|python_in_deepface</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterPath>
+    </InterpreterPath>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="build.py" />
+    <Compile Include="core\qtex\QSubprocessor.py" />
+    <Compile Include="core\qtex\qtex.py" />
+    <Compile Include="core\qtex\QXIconButton.py" />
+    <Compile Include="core\qtex\QXMainWindow.py" />
+    <Compile Include="core\qtex\__init__.py" />
+    <Compile Include="core\samplelib\PackedFaceset.py" />
+    <Compile Include="core\samplelib\Sample.py" />
+    <Compile Include="core\samplelib\SampleGeneratorBase.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFace.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFaceAvatarOperator.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFaceDebug.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFacePerson.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFaceSkinSegDataset - Copy.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFaceTemporal.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFaceTest.py" />
+    <Compile Include="core\samplelib\SampleGeneratorFaceXSeg.py" />
+    <Compile Include="core\samplelib\SampleGeneratorImage.py" />
+    <Compile Include="core\samplelib\SampleGeneratorImageTemporal.py" />
+    <Compile Include="core\samplelib\SampleGeneratorSAE.py" />
+    <Compile Include="core\samplelib\SampleLoader.py" />
+    <Compile Include="core\samplelib\SampleProcessor.py" />
+    <Compile Include="core\samplelib\__init__.py" />
+    <Compile Include="core\swapmodels\ModelBase.py" />
+    <Compile Include="core\swapmodels\Model_AMP\defModel.py" />
+    <Compile Include="core\swapmodels\Model_AMP\Model.py" />
+    <Compile Include="core\swapmodels\Model_AMP\__init__.py" />
+    <Compile Include="core\swapmodels\Model_RTM\Model.py" />
+    <Compile Include="core\swapmodels\Model_RTM\__init__.py" />
+    <Compile Include="core\swapmodels\Model_SAEHD\SAEHDModel.py" />
+    <Compile Include="core\swapmodels\Model_SAEHD\__init__.py" />
+    <Compile Include="core\swapmodels\Model_XSeg\Model.py" />
+    <Compile Include="core\swapmodels\Model_XSeg\__init__.py" />
+    <Compile Include="core\swapmodels\__init__.py" />
+    <Compile Include="core\xlib\time\time_.py" />
+    <Compile Include="core\xlib\time\__init__.py" />
+    <Compile Include="facelib\DFLive\DFMModel.py" />
+    <Compile Include="facelib\DFLive\__init__.py" />
+    <Compile Include="facelib\DFLive\__trash.py" />
+    <Compile Include="facelib\FANExtractor.py" />
+    <Compile Include="facelib\SuperReso\CodeFormerArchi.py" />
+    <Compile Include="facelib\SuperReso\CodeFormerRun.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="facelib\SuperReso\face_gan.py" />
+    <Compile Include="facelib\SUperReso\face_model\face_gan.py" />
+    <Compile Include="facelib\SUperReso\face_model\gpen_model.py" />
+    <Compile Include="facelib\SUperReso\face_model\op\fused_act.py" />
+    <Compile Include="facelib\SUperReso\face_model\op\upfirdn2d.py" />
+    <Compile Include="facelib\SUperReso\face_model\op\__init__.py" />
+    <Compile Include="facelib\SuperReso\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="facelib\onnx\FaceMesh\FaceMesh.py" />
+    <Compile Include="facelib\onnx\InsightFace2d106\InsightFace2D106.py" />
+    <Compile Include="facelib\onnx\S3FD\S3FD.py" />
+    <Compile Include="facelib\onnx\Xseg\XSegOnnx.py" />
+    <Compile Include="facelib\onnx\YoloV5Face\YoloV5Face.py" />
+    <Compile Include="facelib\onnx\__init__.py" />
+    <Compile Include="facelib\XSegEditor\XSegEditorNew.py" />
+    <Compile Include="facelib\xseg\__init__.py" />
+    <Compile Include="gui_main_train.py" />
+    <Compile Include="kit\Auth.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\FaceBeautify.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\FaceEngines.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\FaceExtractThread.py" />
+    <Compile Include="kit\FrameCaptureThread.py" />
+    <Compile Include="kit\LtwDeformTorch.py" />
+    <Compile Include="kit\MattingModNet.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\MattingRVM.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginUiHandler.py" />
+    <Compile Include="matting\decoder.py" />
+    <Compile Include="matting\MattingNetwork.py" />
+    <Compile Include="matting\mobilenetv3.py" />
+    <Compile Include="matting\mat_archi.py" />
+    <Compile Include="test\dfl_mask.py" />
+    <Compile Include="test\green_screen.py" />
+    <Compile Include="vvc\attentions.py" />
+    <Compile Include="vvc\commons.py" />
+    <Compile Include="vvc\gui_main_rvc.py" />
+    <Compile Include="vvc\models_onnx.py" />
+    <Compile Include="vvc\modules.py" />
+    <Compile Include="vvc\rmvpe.py" />
+    <Compile Include="vvc\rvc_models.py" />
+    <Compile Include="vvc\transforms.py" />
+    <Compile Include="vvc\vc_onnx.py" />
+    <Compile Include="vvc\VoiceUiHandler.py" />
+    <Compile Include="test\read_dat.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\thread_sync.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\TpsDeformTensorflow.py" />
+    <Compile Include="kit\WholeFaceSwapThread.py" />
+    <Compile Include="kit\VideoAudioKit.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="copy_pyd.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PreviewUiHandler.py" />
+    <Compile Include="core\cv2ex.py" />
+    <Compile Include="core\imagelib\blursharpen.py" />
+    <Compile Include="core\imagelib\color_transfer.py" />
+    <Compile Include="core\imagelib\common.py" />
+    <Compile Include="core\imagelib\draw.py" />
+    <Compile Include="core\imagelib\equalize_and_stack_square.py" />
+    <Compile Include="core\imagelib\estimate_sharpness.py" />
+    <Compile Include="core\imagelib\filters.py" />
+    <Compile Include="core\imagelib\morph.py" />
+    <Compile Include="core\imagelib\reduce_colors.py" />
+    <Compile Include="core\imagelib\sd\calc.py" />
+    <Compile Include="core\imagelib\sd\draw.py" />
+    <Compile Include="core\imagelib\sd\__init__.py" />
+    <Compile Include="core\imagelib\SegIEPolys.py" />
+    <Compile Include="core\imagelib\text.py" />
+    <Compile Include="core\imagelib\warp.py" />
+    <Compile Include="core\imagelib\__init__.py" />
+    <Compile Include="core\interact\interact.py" />
+    <Compile Include="core\interact\__init__.py" />
+    <Compile Include="core\joblib\MPClassFuncOnDemand.py" />
+    <Compile Include="core\joblib\MPFunc.py" />
+    <Compile Include="core\joblib\SubprocessGenerator.py" />
+    <Compile Include="core\joblib\SubprocessorBase.py" />
+    <Compile Include="core\joblib\ThisThreadGenerator.py" />
+    <Compile Include="core\joblib\__init__.py" />
+    <Compile Include="core\leras\archis\ArchiBase.py" />
+    <Compile Include="core\leras\archis\DeepFakeArchi.py" />
+    <Compile Include="core\leras\archis\__init__.py" />
+    <Compile Include="core\leras\device.py" />
+    <Compile Include="core\leras\initializers\CA.py" />
+    <Compile Include="core\leras\initializers\__init__.py" />
+    <Compile Include="core\leras\layers\AdaIN.py" />
+    <Compile Include="core\leras\layers\BatchNorm2D.py" />
+    <Compile Include="core\leras\layers\BlurPool.py" />
+    <Compile Include="core\leras\layers\Conv2D.py" />
+    <Compile Include="core\leras\layers\Conv2DTranspose.py" />
+    <Compile Include="core\leras\layers\Dense.py" />
+    <Compile Include="core\leras\layers\DenseNorm.py" />
+    <Compile Include="core\leras\layers\DepthwiseConv2D.py" />
+    <Compile Include="core\leras\layers\FRNorm2D.py" />
+    <Compile Include="core\leras\layers\InstanceNorm2D.py" />
+    <Compile Include="core\leras\layers\LayerBase.py" />
+    <Compile Include="core\leras\layers\Saveable.py" />
+    <Compile Include="core\leras\layers\ScaleAdd.py" />
+    <Compile Include="core\leras\layers\TanhPolar.py" />
+    <Compile Include="core\leras\layers\TLU.py" />
+    <Compile Include="core\leras\layers\__init__.py" />
+    <Compile Include="core\leras\models\CodeDiscriminator.py" />
+    <Compile Include="core\leras\models\ModelBase.py" />
+    <Compile Include="core\leras\models\PatchDiscriminator.py" />
+    <Compile Include="core\leras\models\XSeg — копия.py" />
+    <Compile Include="core\leras\models\XSegArchi.py" />
+    <Compile Include="core\leras\models\__init__.py" />
+    <Compile Include="core\leras\nn.py" />
+    <Compile Include="core\leras\ops\__init__.py" />
+    <Compile Include="core\leras\optimizers\AdaBelief.py" />
+    <Compile Include="core\leras\optimizers\OptimizerBase.py" />
+    <Compile Include="core\leras\optimizers\RMSprop.py" />
+    <Compile Include="core\leras\optimizers\__init__.py" />
+    <Compile Include="core\leras\__init__.py" />
+    <Compile Include="core\mathlib\umeyama.py" />
+    <Compile Include="core\mathlib\__init__.py" />
+    <Compile Include="core\joblib\MPSharedList.py" />
+    <Compile Include="core\osex.py" />
+    <Compile Include="core\pathex.py" />
+    <Compile Include="core\randomex.py" />
+    <Compile Include="core\stdex.py" />
+    <Compile Include="core\structex.py" />
+    <Compile Include="core\DFLIMG\DFLIMG.py" />
+    <Compile Include="core\DFLIMG\DFLJPG.py" />
+    <Compile Include="core\DFLIMG\__init__.py" />
+    <Compile Include="AdjustUiHandler.py" />
+    <Compile Include="facelib\facenet\facenet.py" />
+    <Compile Include="facelib\facenet\inception_resnet_v1.py" />
+    <Compile Include="facelib\facenet\test_facenet_verify.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="facelib\facenet\facenet_onnx_export.py" />
+    <Compile Include="facelib\FaceType.py" />
+    <Compile Include="facelib\SuperReso\gpen.py" />
+    <Compile Include="facelib\LandmarksProcessor.py" />
+    <Compile Include="facelib\xseg\XSegNet.py" />
+    <Compile Include="facelib\__init__.py" />
+    <Compile Include="gui_main_live.py" />
+    <Compile Include="gui_main_lab.py" />
+    <Compile Include="kit\BackendThread.py" />
+    <Compile Include="kit\BackendLoadThread.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\FaceVerify.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="start.py" />
+    <Compile Include="test\basic_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\LiveSwapModel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\deform_onnxruntime.py" />
+    <Compile Include="test\mls\mls_torch_deformy.py" />
+    <Compile Include="test\face_warp_demo.py" />
+    <Compile Include="test\faceshape_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\mls\MlsAffineWarping.py" />
+    <Compile Include="test\module1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\dfl-mask.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\mls\MlsDeformTf.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\numba_cuda.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\tf_numpy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\Cv2TpsWarp.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\TpsDeformTorch.py" />
+    <Compile Include="test\wmi.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\ThinFaceMain.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\ServerRequestThread.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\merge_unit_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\mainscripts\ExportXsegOnnx.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\tf_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\ToolKit.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\ShareData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\SwapFaceThread.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LiveUiHandler.py" />
+    <Compile Include="core\localization\localization.py" />
+    <Compile Include="core\localization\__init__.py" />
+    <Compile Include="core\mainscripts\dev_misc.py" />
+    <Compile Include="core\mainscripts\ExportDFM.py" />
+    <Compile Include="core\mainscripts\Extractor.py" />
+    <Compile Include="core\mainscripts\FacesetEnhancer.py" />
+    <Compile Include="core\mainscripts\FacesetResizer.py" />
+    <Compile Include="core\mainscripts\Merger.py" />
+    <Compile Include="core\mainscripts\Sorter.py" />
+    <Compile Include="kit\Trainer.py" />
+    <Compile Include="core\mainscripts\Util.py" />
+    <Compile Include="core\mainscripts\XSegUtil.py" />
+    <Compile Include="LabUiHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="set_env.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\screen_cap.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\AudioRecorder.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\torch_numpy_speed.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrainUiHandlerSlot.py" />
+    <Compile Include="core\xlib\face\ELandmarks2D.py" />
+    <Compile Include="core\xlib\face\EMaskType.py" />
+    <Compile Include="core\xlib\face\Faceset.py" />
+    <Compile Include="core\xlib\face\FaceWarper.py" />
+    <Compile Include="core\xlib\face\FLandmarks2D.py" />
+    <Compile Include="core\xlib\face\FMask.py" />
+    <Compile Include="core\xlib\face\FRect.py" />
+    <Compile Include="core\xlib\face\__init__.py" />
+    <Compile Include="core\xlib\image\color_transfer\rct.py" />
+    <Compile Include="core\xlib\image\color_transfer\sot.py" />
+    <Compile Include="core\xlib\image\color_transfer\__init__.py" />
+    <Compile Include="core\xlib\image\ImageProcessor.py" />
+    <Compile Include="core\xlib\image\sd\calc.py" />
+    <Compile Include="core\xlib\image\sd\draw.py" />
+    <Compile Include="core\xlib\image\sd\__init__.py" />
+    <Compile Include="core\xlib\image\_misc.py" />
+    <Compile Include="core\xlib\image\__init__.py" />
+    <Compile Include="core\xlib\math\Affine2DMat.py" />
+    <Compile Include="core\xlib\math\math_.py" />
+    <Compile Include="test\mls\MlsFaceDeform.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\xlib\math\nms.py" />
+    <Compile Include="core\xlib\math\__init__.py" />
+    <Compile Include="core\xlib\onnxruntime\device.py" />
+    <Compile Include="core\xlib\onnxruntime\InferenceSession.py" />
+    <Compile Include="core\xlib\onnxruntime\__init__.py" />
+    <Compile Include="facelib\XSegEditor\QCursorDB.py" />
+    <Compile Include="facelib\XSegEditor\QIconDB.py" />
+    <Compile Include="facelib\XSegEditor\QImageDB.py" />
+    <Compile Include="facelib\XSegEditor\QStringDB.py" />
+    <Compile Include="facelib\XSegEditor\XSegEditor.py" />
+    <Compile Include="UpdateListDownload.py" />
+    <Compile Include="vtmodel\Archi.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vtmodel\FaceSampleGenerator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vtmodel\ModelTrainer.py" />
+    <Compile Include="vtmodel\PackedFaceset.py" />
+    <Compile Include="vtmodel\Sample.py" />
+    <Compile Include="vtmodel\SampleLoader.py" />
+    <Compile Include="vtmodel\SampleProcessor.py" />
+    <Compile Include="vtmodel\TestTrainer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vtmodel\FaceSwapModelSAE.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kit\RandomOcclude.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StartXsegEditor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vvc\VoiceUiHandler.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="core\" />
+    <Folder Include="core\imagelib\" />
+    <Folder Include="core\imagelib\sd\" />
+    <Folder Include="core\imagelib\sd\__pycache__\" />
+    <Folder Include="core\imagelib\__pycache__\" />
+    <Folder Include="core\interact\" />
+    <Folder Include="core\interact\__pycache__\" />
+    <Folder Include="core\joblib\" />
+    <Folder Include="core\joblib\__pycache__\" />
+    <Folder Include="core\leras\" />
+    <Folder Include="core\leras\archis\" />
+    <Folder Include="core\leras\archis\__pycache__\" />
+    <Folder Include="core\leras\initializers\" />
+    <Folder Include="core\leras\initializers\__pycache__\" />
+    <Folder Include="core\leras\layers\" />
+    <Folder Include="core\leras\layers\__pycache__\" />
+    <Folder Include="core\leras\models\" />
+    <Folder Include="core\leras\models\__pycache__\" />
+    <Folder Include="core\leras\ops\" />
+    <Folder Include="core\leras\ops\__pycache__\" />
+    <Folder Include="core\leras\optimizers\" />
+    <Folder Include="core\leras\optimizers\__pycache__\" />
+    <Folder Include="core\leras\__pycache__\" />
+    <Folder Include="core\mathlib\" />
+    <Folder Include="core\mathlib\__pycache__\" />
+    <Folder Include="core\qtex\" />
+    <Folder Include="core\qtex\__pycache__\" />
+    <Folder Include="facelib\xseg\" />
+    <Folder Include="matting\" />
+    <Folder Include="matting\__pycache__\" />
+    <Folder Include="test\mls\" />
+    <Folder Include="vtmodel\" />
+    <Folder Include="core\samplelib\" />
+    <Folder Include="core\samplelib\__pycache__\" />
+    <Folder Include="core\swapmodels\" />
+    <Folder Include="core\swapmodels\Model_AMP\" />
+    <Folder Include="core\swapmodels\Model_AMP\__pycache__\" />
+    <Folder Include="core\swapmodels\Model_RTM\" />
+    <Folder Include="core\swapmodels\Model_SAEHD\" />
+    <Folder Include="core\swapmodels\Model_SAEHD\__pycache__\" />
+    <Folder Include="core\swapmodels\Model_XSeg\" />
+    <Folder Include="core\swapmodels\Model_XSeg\__pycache__\" />
+    <Folder Include="core\swapmodels\__pycache__\" />
+    <Folder Include="core\xlib\time\" />
+    <Folder Include="core\xlib\time\__pycache__\" />
+    <Folder Include="core\__pycache__\" />
+    <Folder Include="core\DFLIMG\" />
+    <Folder Include="core\DFLIMG\__pycache__\" />
+    <Folder Include="facelib\" />
+    <Folder Include="facelib\DFLive\" />
+    <Folder Include="facelib\DFLive\__pycache__\" />
+    <Folder Include="facelib\facenet\" />
+    <Folder Include="facelib\SuperReso\" />
+    <Folder Include="facelib\SUperReso\face_model\" />
+    <Folder Include="facelib\SUperReso\face_model\op\" />
+    <Folder Include="facelib\SUperReso\face_model\op\__pycache__\" />
+    <Folder Include="facelib\SUperReso\face_model\__pycache__\" />
+    <Folder Include="facelib\onnx\" />
+    <Folder Include="facelib\onnx\FaceMesh\" />
+    <Folder Include="facelib\onnx\FaceMesh\__pycache__\" />
+    <Folder Include="facelib\onnx\InsightFace2d106\" />
+    <Folder Include="facelib\onnx\InsightFace2d106\__pycache__\" />
+    <Folder Include="facelib\onnx\S3FD\" />
+    <Folder Include="facelib\onnx\S3FD\__pycache__\" />
+    <Folder Include="facelib\onnx\Xseg\" />
+    <Folder Include="facelib\onnx\Xseg\__pycache__\" />
+    <Folder Include="facelib\onnx\YoloV5Face\" />
+    <Folder Include="facelib\onnx\YoloV5Face\__pycache__\" />
+    <Folder Include="facelib\onnx\__pycache__\" />
+    <Folder Include="facelib\__pycache__\" />
+    <Folder Include="core\localization\" />
+    <Folder Include="core\localization\__pycache__\" />
+    <Folder Include="core\mainscripts\" />
+    <Folder Include="core\mainscripts\__pycache__\" />
+    <Folder Include="kit\" />
+    <Folder Include="test\" />
+    <Folder Include="core\xlib\" />
+    <Folder Include="core\xlib\face\" />
+    <Folder Include="core\xlib\face\__pycache__\" />
+    <Folder Include="core\xlib\image\" />
+    <Folder Include="core\xlib\image\color_transfer\" />
+    <Folder Include="core\xlib\image\color_transfer\__pycache__\" />
+    <Folder Include="core\xlib\image\sd\" />
+    <Folder Include="core\xlib\image\__pycache__\" />
+    <Folder Include="core\xlib\math\" />
+    <Folder Include="core\xlib\math\__pycache__\" />
+    <Folder Include="core\xlib\onnxruntime\" />
+    <Folder Include="core\xlib\onnxruntime\__pycache__\" />
+    <Folder Include="facelib\XSegEditor\" />
+    <Folder Include="facelib\XSegEditor\gfx\" />
+    <Folder Include="facelib\XSegEditor\gfx\cursors\" />
+    <Folder Include="facelib\XSegEditor\gfx\fonts\" />
+    <Folder Include="facelib\XSegEditor\gfx\icons\" />
+    <Folder Include="facelib\XSegEditor\gfx\images\" />
+    <Folder Include="facelib\XSegEditor\__pycache__\" />
+    <Folder Include="vvc\" />
+    <Folder Include="vvc\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\imagelib\sd\__pycache__\calc.cpython-36.pyc" />
+    <Content Include="core\imagelib\sd\__pycache__\draw.cpython-36.pyc" />
+    <Content Include="core\imagelib\sd\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\blursharpen.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\color_transfer.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\common.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\draw.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\equalize_and_stack_square.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\estimate_sharpness.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\filters.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\morph.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\reduce_colors.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\SegIEPolys.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\text.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\warp.cpython-36.pyc" />
+    <Content Include="core\imagelib\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\interact\__pycache__\interact.cpython-36.pyc" />
+    <Content Include="core\interact\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\joblib\__pycache__\MPClassFuncOnDemand.cpython-36.pyc" />
+    <Content Include="core\joblib\__pycache__\MPFunc.cpython-36.pyc" />
+    <Content Include="core\joblib\__pycache__\SubprocessGenerator.cpython-36.pyc" />
+    <Content Include="core\joblib\__pycache__\SubprocessorBase.cpython-36.pyc" />
+    <Content Include="core\joblib\__pycache__\ThisThreadGenerator.cpython-36.pyc" />
+    <Content Include="core\joblib\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\leras\archis\__pycache__\ArchiBase.cpython-36.pyc" />
+    <Content Include="core\leras\archis\__pycache__\DeepFakeArchi.cpython-36.pyc" />
+    <Content Include="core\leras\archis\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\leras\initializers\__pycache__\CA.cpython-36.pyc" />
+    <Content Include="core\leras\initializers\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\AdaIN.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\BatchNorm2D.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\BlurPool.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\Conv2D.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\Conv2DTranspose.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\Dense.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\DenseNorm.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\DepthwiseConv2D.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\FRNorm2D.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\InstanceNorm2D.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\LayerBase.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\Saveable.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\ScaleAdd.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\TanhPolar.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\TLU.cpython-36.pyc" />
+    <Content Include="core\leras\layers\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\leras\models\__pycache__\CodeDiscriminator.cpython-36.pyc" />
+    <Content Include="core\leras\models\__pycache__\ModelBase.cpython-36.pyc" />
+    <Content Include="core\leras\models\__pycache__\PatchDiscriminator.cpython-36.pyc" />
+    <Content Include="core\leras\models\__pycache__\XSeg.cpython-36.pyc" />
+    <Content Include="core\leras\models\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\leras\ops\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\leras\optimizers\__pycache__\AdaBelief.cpython-36.pyc" />
+    <Content Include="core\leras\optimizers\__pycache__\OptimizerBase.cpython-36.pyc" />
+    <Content Include="core\leras\optimizers\__pycache__\RMSprop.cpython-36.pyc" />
+    <Content Include="core\leras\optimizers\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\leras\__pycache__\device.cpython-36.pyc" />
+    <Content Include="core\leras\__pycache__\nn.cpython-36.pyc" />
+    <Content Include="core\leras\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\mathlib\__pycache__\umeyama.cpython-36.pyc" />
+    <Content Include="core\mathlib\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\qtex\__pycache__\qtex.cpython-37.pyc" />
+    <Content Include="core\qtex\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\PackedFaceset.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\PackedFaceset.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\Sample.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\Sample.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorBase.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorBase.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFace.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFace.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFaceCelebAMaskHQ.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFaceCelebAMaskHQ.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFacePerson.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFacePerson.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFaceTemporal.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFaceTemporal.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFaceXSeg.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorFaceXSeg.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorImage.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorImage.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorImageTemporal.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleGeneratorImageTemporal.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleLoader.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleLoader.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleProcessor.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\SampleProcessor.cpython-37.pyc" />
+    <Content Include="core\samplelib\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\samplelib\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\swapmodels\Model_AMP\__pycache__\Model.cpython-36.pyc" />
+    <Content Include="core\swapmodels\Model_AMP\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\swapmodels\Model_SAEHD\__pycache__\Model.cpython-36.pyc" />
+    <Content Include="core\swapmodels\Model_SAEHD\__pycache__\Model.cpython-37.pyc" />
+    <Content Include="core\swapmodels\Model_SAEHD\__pycache__\SAEHDModel.cpython-37.pyc" />
+    <Content Include="core\swapmodels\Model_SAEHD\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\swapmodels\Model_SAEHD\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\swapmodels\Model_XSeg\__pycache__\Model.cpython-37.pyc" />
+    <Content Include="core\swapmodels\Model_XSeg\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\swapmodels\__pycache__\ModelBase.cpython-36.pyc" />
+    <Content Include="core\swapmodels\__pycache__\ModelBase.cpython-37.pyc" />
+    <Content Include="core\swapmodels\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\swapmodels\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\xlib\time\__pycache__\time_.cpython-37.pyc" />
+    <Content Include="core\xlib\time\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\__pycache__\cv2ex.cpython-36.pyc" />
+    <Content Include="core\__pycache__\osex.cpython-36.pyc" />
+    <Content Include="core\__pycache__\pathex.cpython-36.pyc" />
+    <Content Include="core\__pycache__\randomex.cpython-36.pyc" />
+    <Content Include="core\__pycache__\stdex.cpython-36.pyc" />
+    <Content Include="core\__pycache__\structex.cpython-36.pyc" />
+    <Content Include="core\DFLIMG\__pycache__\DFLIMG.cpython-36.pyc" />
+    <Content Include="core\DFLIMG\__pycache__\DFLJPG.cpython-36.pyc" />
+    <Content Include="core\DFLIMG\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="facelib\DFLive\__pycache__\DFMModel.cpython-36.pyc" />
+    <Content Include="facelib\DFLive\__pycache__\DFMModel.cpython-37.pyc" />
+    <Content Include="facelib\DFLive\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="facelib\DFLive\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="facelib\SUperReso\face_model\GPEN-BFR-512.pth" />
+    <Content Include="facelib\SUperReso\face_model\op\fused_bias_act.cpp" />
+    <Content Include="facelib\SUperReso\face_model\op\fused_bias_act_kernel.cu" />
+    <Content Include="facelib\SUperReso\face_model\op\upfirdn2d.cpp" />
+    <Content Include="facelib\SUperReso\face_model\op\upfirdn2d_kernel.cu" />
+    <Content Include="facelib\SUperReso\face_model\op\__pycache__\fused_act.cpython-37.pyc" />
+    <Content Include="facelib\SUperReso\face_model\op\__pycache__\upfirdn2d.cpython-37.pyc" />
+    <Content Include="facelib\SUperReso\face_model\op\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="facelib\SUperReso\face_model\__pycache__\face_gan.cpython-37.pyc" />
+    <Content Include="facelib\SUperReso\face_model\__pycache__\gpen_model.cpython-37.pyc" />
+    <Content Include="facelib\onnx\FaceMesh\FaceMesh.onnx" />
+    <Content Include="facelib\onnx\FaceMesh\__pycache__\FaceMesh.cpython-36.pyc" />
+    <Content Include="facelib\onnx\FaceMesh\__pycache__\FaceMesh.cpython-37.pyc" />
+    <Content Include="facelib\onnx\InsightFace2d106\__pycache__\InsightFace2D106.cpython-36.pyc" />
+    <Content Include="facelib\onnx\InsightFace2d106\__pycache__\InsightFace2D106.cpython-37.pyc" />
+    <Content Include="facelib\onnx\S3FD\__pycache__\S3FD.cpython-36.pyc" />
+    <Content Include="facelib\onnx\S3FD\__pycache__\S3FD.cpython-37.pyc" />
+    <Content Include="facelib\onnx\Xseg\XSeg_model.onnx" />
+    <Content Include="facelib\onnx\Xseg\__pycache__\FaceMesh.cpython-36.pyc" />
+    <Content Include="facelib\onnx\Xseg\__pycache__\FaceMesh.cpython-37.pyc" />
+    <Content Include="facelib\onnx\Xseg\__pycache__\XSegOnnx.cpython-37.pyc" />
+    <Content Include="facelib\onnx\YoloV5Face\__pycache__\YoloV5Face.cpython-36.pyc" />
+    <Content Include="facelib\onnx\YoloV5Face\__pycache__\YoloV5Face.cpython-37.pyc" />
+    <Content Include="facelib\onnx\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="facelib\onnx\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="facelib\__pycache__\FaceEnhancer.cpython-36.pyc" />
+    <Content Include="facelib\__pycache__\FaceType.cpython-36.pyc" />
+    <Content Include="facelib\__pycache__\FANExtractor.cpython-36.pyc" />
+    <Content Include="facelib\__pycache__\LandmarksProcessor.cpython-36.pyc" />
+    <Content Include="facelib\__pycache__\S3FDExtractor.cpython-36.pyc" />
+    <Content Include="facelib\__pycache__\XSegNet.cpython-36.pyc" />
+    <Content Include="facelib\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\localization\__pycache__\localization.cpython-36.pyc" />
+    <Content Include="core\localization\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\ExportDFM.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\Extractor.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\FacesetEnhancer.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\FacesetResizer.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\Merger.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\Sorter.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\Trainer.cpython-36.pyc" />
+    <Content Include="core\mainscripts\__pycache__\VideoEd.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\ELandmarks2D.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\ELandmarks2D.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\EMaskType.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\EMaskType.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\Faceset.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\Faceset.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FaceWarper.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FaceWarper.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FLandmarks2D.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FLandmarks2D.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FMask.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FMask.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FPose.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FPose.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FRect.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\FRect.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\IState.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\IState.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\UFaceMark.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\UFaceMark.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\UImage.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\UImage.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\UPerson.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\UPerson.cpython-37.pyc" />
+    <Content Include="core\xlib\face\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\xlib\face\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\xlib\image\color_transfer\__pycache__\rct.cpython-37.pyc" />
+    <Content Include="core\xlib\image\color_transfer\__pycache__\sot.cpython-37.pyc" />
+    <Content Include="core\xlib\image\color_transfer\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\xlib\image\__pycache__\ImageProcessor.cpython-36.pyc" />
+    <Content Include="core\xlib\image\__pycache__\ImageProcessor.cpython-37.pyc" />
+    <Content Include="core\xlib\image\__pycache__\_misc.cpython-36.pyc" />
+    <Content Include="core\xlib\image\__pycache__\_misc.cpython-37.pyc" />
+    <Content Include="core\xlib\image\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\xlib\image\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\xlib\math\__pycache__\Affine2DMat.cpython-36.pyc" />
+    <Content Include="core\xlib\math\__pycache__\Affine2DMat.cpython-37.pyc" />
+    <Content Include="core\xlib\math\__pycache__\math_.cpython-36.pyc" />
+    <Content Include="core\xlib\math\__pycache__\math_.cpython-37.pyc" />
+    <Content Include="core\xlib\math\__pycache__\nms.cpython-36.pyc" />
+    <Content Include="core\xlib\math\__pycache__\nms.cpython-37.pyc" />
+    <Content Include="core\xlib\math\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="core\xlib\math\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="core\xlib\onnxruntime\__pycache__\device.cpython-37.pyc" />
+    <Content Include="core\xlib\onnxruntime\__pycache__\InferenceSession.cpython-37.pyc" />
+    <Content Include="core\xlib\onnxruntime\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="facelib\XSegEditor\gfx\cursors\cross_blue.png" />
+    <Content Include="facelib\XSegEditor\gfx\cursors\cross_green.png" />
+    <Content Include="facelib\XSegEditor\gfx\cursors\cross_red.png" />
+    <Content Include="facelib\XSegEditor\gfx\fonts\NotoSans-Medium.ttf" />
+    <Content Include="facelib\XSegEditor\gfx\icons\app_icon.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\delete_poly.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\down.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\left.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\poly_color.psd" />
+    <Content Include="facelib\XSegEditor\gfx\icons\poly_color_blue.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\poly_color_green.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\poly_color_red.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\poly_type_exclude.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\poly_type_include.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\poly_type_source.psd" />
+    <Content Include="facelib\XSegEditor\gfx\icons\pt_edit_mode.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\pt_edit_mode_source.psd" />
+    <Content Include="facelib\XSegEditor\gfx\icons\redo_pt.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\redo_pt_source.psd" />
+    <Content Include="facelib\XSegEditor\gfx\icons\right.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\trashcan.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\undo_pt.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\undo_pt_source.psd" />
+    <Content Include="facelib\XSegEditor\gfx\icons\up.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\view_baked.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\view_lock_center.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\view_xseg.png" />
+    <Content Include="facelib\XSegEditor\gfx\icons\view_xseg_overlay.png" />
+    <Content Include="facelib\XSegEditor\gfx\images\intro.png" />
+    <Content Include="facelib\XSegEditor\gfx\images\intro_source.psd" />
+    <Content Include="facelib\XSegEditor\__pycache__\QCursorDB.cpython-36.pyc" />
+    <Content Include="facelib\XSegEditor\__pycache__\QIconDB.cpython-36.pyc" />
+    <Content Include="facelib\XSegEditor\__pycache__\QImageDB.cpython-36.pyc" />
+    <Content Include="facelib\XSegEditor\__pycache__\QStringDB.cpython-36.pyc" />
+    <Content Include="facelib\XSegEditor\__pycache__\XSegEditor.cpython-36.pyc" />
+    <Content Include="matting\__pycache__\decoder.cpython-37.pyc" />
+    <Content Include="matting\__pycache__\deep_guided_filter.cpython-37.pyc" />
+    <Content Include="matting\__pycache__\fast_guided_filter.cpython-37.pyc" />
+    <Content Include="matting\__pycache__\lraspp.cpython-37.pyc" />
+    <Content Include="matting\__pycache__\MattingNetwork.cpython-37.pyc" />
+    <Content Include="matting\__pycache__\mobilenetv3.cpython-37.pyc" />
+    <Content Include="matting\__pycache__\resnet.cpython-37.pyc" />
+    <Content Include="matting\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="vvc\__pycache__\rmvpe.cpython-37.pyc" />
+    <Content Include="vvc\__pycache__\VoiceUiHandler.cpython-37.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+    <InterpreterReference Include="Global|VisualStudio|F_VtubeKit" />
+    <InterpreterReference Include="Global|VisualStudio|python_in_deepface" />
+    <InterpreterReference Include="Global|VisualStudio|python_in_udisk" />
+    <InterpreterReference Include="Global|VisualStudio|Python_VtubeKit_E" />
+    <InterpreterReference Include="Global|VisualStudio|VtubeKit" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
